@@ -6,10 +6,8 @@ void main() {
   runApp(Obscura());
 }
 
-/**
- * main.dart is responsible for starting the app and dealing with Obscura's 
- * navigation. Pushing and Popping screens as needed.
- */
+/// main.dart is responsible for starting the app and dealing with Obscura's
+/// navigation. Pushing and Popping screens as needed.
 
 class Obscura extends StatelessWidget {
   @override
@@ -21,7 +19,7 @@ class Obscura extends StatelessWidget {
         accentColor: primaryColour,
       ),
       routes: {
-        '/': (context) => feed(),
+        '/': (context) => Feed(),
       },
     );
   }
