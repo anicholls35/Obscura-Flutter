@@ -15,11 +15,6 @@ class Feed extends StatelessWidget {
             shape: CircleBorder(),
           ),
         ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-          ),
-        ],
       ),
       body: Center(
         child: Text("Hello World"),
