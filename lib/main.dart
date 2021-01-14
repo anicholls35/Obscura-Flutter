@@ -15,8 +15,8 @@ class Obscura extends StatelessWidget {
     return MaterialApp(
       title: 'Obscura',
       theme: ThemeData(
-        primaryColor: greyColour,
-        accentColor: primaryColour,
+        primaryColor: primaryColour,
+        accentColor: accentColour,
       ),
       routes: {
         '/': (context) => Feed(),

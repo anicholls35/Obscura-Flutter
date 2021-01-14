@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:obscura/Components/baseAppBar.dart';
 
 //TODO: Create a component for posts
 //TODO: Format feed page to look like prototype
@@ -11,17 +12,9 @@ class Feed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'OBSCURA',
-        ),
-        leading: new Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Material(
-            shape: CircleBorder(),
-          ),
-        ),
+      appBar: BaseAppBar(
+        title: Text('OBSCURA'),
+        appBar: AppBar(),
       ),
       body: Center(
         child: Text("Hello World"),
