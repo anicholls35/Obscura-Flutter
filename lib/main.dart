@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:obscura/Pages/hello_world.dart';
+import 'package:obscura/Pages/Feed/feed.dart';
 import 'package:obscura/constants.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class Obscura extends StatelessWidget {
         accentColor: accentColour,
       ),
       routes: {
-        '/': (context) => hello_world(),
+        '/': (context) => Feed(),
       },
     );
   }
