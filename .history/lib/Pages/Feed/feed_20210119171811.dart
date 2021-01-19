@@ -4,6 +4,11 @@ import '../../Global_Components/AppBar/baseAppBar.dart';
 import '../../Global_Components/AppBar/mapWidget.dart';
 import '../../Global_Components/AppBar/searchWidget.dart';
 
+//TODO: Format feed page to look like prototype
+//TODO: Create appbar with correct format
+//TODO: Seperate appbar as component - allow uniformity accross pages
+//TODO: Create a bottom bar
+//TODO: Link to navigation page
 class Feed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

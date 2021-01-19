@@ -3,7 +3,6 @@ import 'package:obscura/Pages/Feed/body.dart';
 import '../../Global_Components/AppBar/baseAppBar.dart';
 import '../../Global_Components/AppBar/mapWidget.dart';
 import '../../Global_Components/AppBar/searchWidget.dart';
-
 class Feed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

@@ -4,6 +4,8 @@ import '../../Global_Components/AppBar/baseAppBar.dart';
 import '../../Global_Components/AppBar/mapWidget.dart';
 import '../../Global_Components/AppBar/searchWidget.dart';
 
+
+//TODO: Link to navigation page
 class Feed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
