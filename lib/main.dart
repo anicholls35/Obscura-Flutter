@@ -19,7 +19,7 @@ class Obscura extends StatelessWidget {
         accentColor: accentColour,
       ),
       routes: {
-        '/': (context) => Feed(),
+        '/': (context) => hello_world(),
       },
     );
   }
