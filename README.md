@@ -11,6 +11,14 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 
 # Obscura Changelog
 
+## 19th January 2021
+### Internal Changes
+1. main branch file structure has been modified
+   - .gitignore now added
+   - removed user based dependencies
+   - added hello_world.dart as example screen
+2. New file structure instructions published to teams
+
 ## 14th January 2021
 ### Internal Changes
 1. Created baseAppBar.dart in **/lib/components**
