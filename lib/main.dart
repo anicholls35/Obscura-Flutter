@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:obscura/Pages/feed.dart';
+import 'package:obscura/Pages/Feed/feed.dart';
 import 'package:obscura/constants.dart';
 
 void main() {
