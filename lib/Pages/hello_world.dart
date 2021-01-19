@@ -9,7 +9,7 @@ import 'package:obscura/Components/AppBar/searchWidget.dart';
 //TODO: Create a bottom bar
 //TODO: Link to navigation page
 
-class Feed extends StatelessWidget {
+class hello_world extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
