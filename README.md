@@ -20,3 +20,14 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 ### Internal Changes
 1. Base Project with skelton framework uploaded to GitHub Repo
 2. Issues/Tasks Assigned
+
+## 18th January 2021
+1. Created new components folder /lib/LoginReg
+2. Implemented ElevatedButtons for the various LoginButtons
+3. Implemented a LoginButtonColumn to hold the four buttons desired
+
+## 19th January 2021
+1. Created new components folder /lib/LoginReg
+2. Implemented TextFormFields for the login and register form fields
+3. Implemented a RegisterColumn to hold the four buttons desired
+4. Completed an initial version of the login and register screens

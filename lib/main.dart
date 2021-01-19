@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:obscura/Pages/feed.dart';
 import 'package:obscura/constants.dart';
+import 'Pages/register.dart';
+import 'package:obscura/Pages/login.dart';
 
 void main() {
   runApp(Obscura());
@@ -19,7 +20,7 @@ class Obscura extends StatelessWidget {
         accentColor: accentColour,
       ),
       routes: {
-        '/': (context) => Feed(),
+        '/': (context) => register(),
       },
     );
   }
