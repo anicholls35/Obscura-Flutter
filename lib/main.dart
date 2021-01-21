@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:obscura/Full_Screen_Post/fullScreenPost.dart';
-import 'package:obscura/Pages/Feed/feed.dart';
+import 'package:obscura/Pages/feed.dart';
 import 'package:obscura/constants.dart';
 
 void main() {
@@ -18,10 +17,9 @@ class Obscura extends StatelessWidget {
       theme: ThemeData(
         primaryColor: primaryColour,
         accentColor: accentColour,
-        scaffoldBackgroundColor: primaryColour,
       ),
       routes: {
-        '/': (context) => FullScreenPost(),
+        '/': (context) => Feed(),
       },
     );
   }
