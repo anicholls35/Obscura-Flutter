@@ -5,7 +5,6 @@ INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/main/
 INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/main/AndroidManifest.xml:1:1-41:12
 INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/main/AndroidManifest.xml:1:1-41:12
 MERGED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/main/AndroidManifest.xml:1:1-41:12
-MERGED from [:integration_test] /Users/adamnicholls/Documents/GitHub/Obsucra/build/integration_test/intermediates/library_manifest/debug/AndroidManifest.xml:7:1-12:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/2fd9120a6da4df3dbabdd40f6a2d8995/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/68dbf8ea01a1dbd974fc87b5753550f0/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/eb26273f8f7192460456ce62b9bdf9ef/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -16,14 +15,9 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/adamnicholls/.gr
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/2271d874344878e62b9a8e309af0c39d/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/fb333fb43575d8a3b51161295454427f/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/cad25976877a6ae855ef6821534f58a1/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.test:rules:1.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/1cbd41b62c7c7397e3c1ec08caa5e7cb/rules-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.test.espresso:espresso-core:3.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/b57e330d5fcdd60ce3b36badc90dc06f/espresso-core-3.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.test:runner:1.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/4aea98bec60149d37426ac7d3367a0ad/runner-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/5f606c30f064eed94124828de37fadc0/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/96aee308bccd03bc62c306516c23a410/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.test:monitor:1.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/9fa135e36fbc0981dc10185b47173f5d/monitor-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/15792e6083b2b5b5a7ffa285d47daa24/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.test.espresso:espresso-idling-resource:3.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/f0a1db59a6b3314bd2a76354ef8a570b/espresso-idling-resource-3.2.0/AndroidManifest.xml:17:1-24:12
 INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/debug/AndroidManifest.xml:1:1-7:12
@@ -99,8 +93,6 @@ uses-sdk
 INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/main/AndroidManifest.xml
-MERGED from [:integration_test] /Users/adamnicholls/Documents/GitHub/Obsucra/build/integration_test/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-44
-MERGED from [:integration_test] /Users/adamnicholls/Documents/GitHub/Obsucra/build/integration_test/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/2fd9120a6da4df3dbabdd40f6a2d8995/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/2fd9120a6da4df3dbabdd40f6a2d8995/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/68dbf8ea01a1dbd974fc87b5753550f0/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -121,22 +113,12 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/adamnicholls/.g
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/fb333fb43575d8a3b51161295454427f/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/cad25976877a6ae855ef6821534f58a1/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/cad25976877a6ae855ef6821534f58a1/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.test:rules:1.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/1cbd41b62c7c7397e3c1ec08caa5e7cb/rules-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.test:rules:1.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/1cbd41b62c7c7397e3c1ec08caa5e7cb/rules-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.test.espresso:espresso-core:3.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/b57e330d5fcdd60ce3b36badc90dc06f/espresso-core-3.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.test.espresso:espresso-core:3.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/b57e330d5fcdd60ce3b36badc90dc06f/espresso-core-3.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.test:runner:1.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/4aea98bec60149d37426ac7d3367a0ad/runner-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.test:runner:1.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/4aea98bec60149d37426ac7d3367a0ad/runner-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/5f606c30f064eed94124828de37fadc0/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/5f606c30f064eed94124828de37fadc0/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/96aee308bccd03bc62c306516c23a410/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/96aee308bccd03bc62c306516c23a410/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.test:monitor:1.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/9fa135e36fbc0981dc10185b47173f5d/monitor-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.test:monitor:1.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/9fa135e36fbc0981dc10185b47173f5d/monitor-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/15792e6083b2b5b5a7ffa285d47daa24/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/15792e6083b2b5b5a7ffa285d47daa24/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.test.espresso:espresso-idling-resource:3.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/f0a1db59a6b3314bd2a76354ef8a570b/espresso-idling-resource-3.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.test.espresso:espresso-idling-resource:3.2.0] /Users/adamnicholls/.gradle/caches/transforms-2/files-2.1/f0a1db59a6b3314bd2a76354ef8a570b/espresso-idling-resource-3.2.0/AndroidManifest.xml:20:5-22:41
 INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
