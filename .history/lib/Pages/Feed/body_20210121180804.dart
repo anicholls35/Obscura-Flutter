@@ -4,7 +4,7 @@ import 'package:obscura/Pages/Feed/Components/channelSlider.dart';
 import 'package:obscura/Pages/Feed/Components/postImage.dart';
 import 'package:obscura/Pages/Feed/Components/feedPost.dart';
 
-//TODO: Look into dynamic flutter widget building
+//TODO: 
 class Body extends StatelessWidget {
   const Body({
     Key key,

@@ -24,6 +24,7 @@ class Feed extends StatelessWidget {
       //scrollable frame. It will stop when the end has been reached. Change
       //to pull in more feeds.
       //TODO: Make feed auto load more posts when user reaches the end. (Backend Needed)
+      //TODO: Add Row on top of this for channel cards
       body: Body(),
     );
   }

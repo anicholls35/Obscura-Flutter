@@ -36,6 +36,9 @@ class PostImage extends StatelessWidget {
             ),
           ),
         ),
+        //Below renders in the text and icons and alligns them to where they
+        //need to go
+
       ],
     );
   }

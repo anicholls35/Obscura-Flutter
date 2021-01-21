@@ -21,7 +21,9 @@ class feedPost extends StatelessWidget {
       : super(key: key);
 
   //Returns a container widget will values on display
+  //TODO: Format Container to match High-Fi Prototype
   //TODO: Fix ImageAssets not loading
+  //TODO: Format Row Widget to add spacing
   @override
   Widget build(BuildContext context) {
     return Container(

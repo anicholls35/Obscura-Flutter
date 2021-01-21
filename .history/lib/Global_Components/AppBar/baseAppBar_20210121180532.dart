@@ -9,11 +9,14 @@ import 'package:obscura/constants.dart';
 //and also any actions (named widgets). Actions will be the search button
 //down the line.
 
+//TODO: Allow Dev to pass a profile image to fill the emoty circle for active profile
+
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color backgroundColor = primaryColour;
   final Text title;
   final AppBar appBar;
   final List<Widget> widgets;
+  final String activeUserPicURL;
 
   const BaseAppBar(
       {Key key, @required this.title, @required this.appBar, this.widgets})
@@ -22,13 +25,24 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      elevation: 20,
       centerTitle: true,
       title: title,
       backgroundColor: backgroundColor,
       leading: new Padding(
         padding: EdgeInsets.all(8.0),
-        child: Material(
-          shape: CircleBorder(),
+        child: Container(
+          width: 20,
+          height: 20,
+          decoration: BoxDecoration(
+            border: Border.all(color: secondryColour),
+            shape: BoxShape.circle,
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: NetworkImage(
+                  '$'),
+            ),
+          ),
         ),
       ),
       actions: widgets,
