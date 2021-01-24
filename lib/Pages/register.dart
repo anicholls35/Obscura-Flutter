@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:obscura/Components/AppBar/baseAppBar.dart';
-import 'package:obscura/Components/AppBar/mapWidget.dart';
-import 'package:obscura/Components/AppBar/searchWidget.dart';
-import 'package:obscura/Components/LoginReg/LoginButton.dart';
-import 'package:obscura/Components/LoginReg/RegisterColumn.dart';
+import 'package:obscura/Global_Components/LoginReg/RegisterColumn.dart';
 import 'package:obscura/constants.dart';
 
 //TODO: Link to channel select page

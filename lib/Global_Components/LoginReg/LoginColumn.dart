@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:obscura/Components/LoginReg/LoginButton.dart';
-import 'package:obscura/Components/LoginReg/LoginFormField.dart';
 import 'package:obscura/constants.dart';
+import 'LoginButton.dart';
+import 'LoginFormField.dart';
 
 class LoginColumn extends StatelessWidget {
   //Button Values
