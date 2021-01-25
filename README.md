@@ -21,6 +21,8 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 7. Addded onPress function to buttons
 8. Created channelData class in /lib/Global_Companents/Fake_Data
 9. Fixed Navigation bar being able to call itself
+10. Fixed SVGs not displaying correctly
+11. Fixed Keyboard from disrupting the widgets which should of been immutable
 
 #### Known Issues
 1. Can't fetch input from TextArea
@@ -81,7 +83,7 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 10. Added haptic feedback
 
 #### Known Issues
-1. Feed is suited for responsive design
+1. Feed isn't suited for responsive design
 2. Can't hide darkened image edges to see image in full
 3. No swipe back gesture on Comments and Full Screen Posts Pages
 4. Channel Slider isn't linked to channels
