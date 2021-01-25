@@ -60,7 +60,7 @@ class _LoginColumn extends State<LoginColumn> {
             edgeInsetsGeometry: formEdgeInsetsGeometry,
             paddingInsets: formPaddingInsets,
             fillColor: primaryColour,
-            obscure: false,
+            obscure: true,
           ),
         ),
         SizedBox(
