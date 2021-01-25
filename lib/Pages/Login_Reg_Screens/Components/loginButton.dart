@@ -28,7 +28,6 @@ class LoginButton extends StatelessWidget {
       padding: this.paddingInsets,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            minimumSize: Size(20, 20),
             primary: this.buttonColor,
             textStyle: this.textStyle,
             shape: new RoundedRectangleBorder(

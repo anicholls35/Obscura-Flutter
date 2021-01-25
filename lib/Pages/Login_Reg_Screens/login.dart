@@ -4,6 +4,8 @@ import 'package:obscura/Pages/Login_Reg_Screens/Components/loginButton.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/Components/loginColumn.dart';
 import 'package:obscura/constants.dart';
 
+import 'Components/loginColumn.dart';
+
 //TODO: Link to Registration page
 //TODO: Link to channel select page
 //TODO: Find way to Hide bottom Container.
@@ -42,17 +44,24 @@ class Login extends StatelessWidget {
               ),
             ),
           ),
-          LoginButton(
-            textStyle: new TextStyle(
-              color: Colors.white,
-              fontSize: 10,
-              fontWeight: FontWeight.bold,
+          Positioned(
+            top: 28,
+            right: 5,
+            child: LoginButton(
+              textStyle: new TextStyle(
+                color: Colors.white,
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+              ),
+              edgeInsetsGeometry: EdgeInsets.symmetric(
+                horizontal: 40,
+              ),
+              paddingInsets: EdgeInsets.all(15),
+              buttonText: "REGISTER",
+              buttonColor: secondryColour,
             ),
-            edgeInsetsGeometry: EdgeInsets.all(8),
-            paddingInsets: EdgeInsets.all(15),
-            buttonText: "REGISTER",
-            buttonColor: secondryColour,
           ),
+          LoginColumn(),
         ],
       ),
     );

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/adamnicholls/Documents/FlutterProjects/obscura/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/adamnicholls/Documents/GitHub/Obsucra/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/adamnicholls/Documents/FlutterProjects/obscura/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/adamnicholls/Documents/GitHub/Obsucra/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
