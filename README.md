@@ -12,7 +12,7 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 # Obscura Change-log
 
 ### 25th January 2021
-***!!! NOTE: Any build numbers < 1000 are no longer compatible with this branch. Under no circumstance must a branch with build <1000 be mirgrated. Exception: BUILD: 0781 !!!***
+***!!! NOTE: Any build numbers which start with #0 are no longer compatible with this branch. Under no circumstance must a branch with build starting with #0 be migrated. Exception: BUILD: 0781 !!!***
 #### VERSION: 1.0.0-pre
 1. All branches merged to flutter master channel
 2. Linked App Bar to profileSplashscreen.dart
