@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "adobe_xd",
+      "rootUri": "file:///Users/adamnicholls/.pub-cache/hosted/pub.dartlang.org/adobe_xd-1.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/adamnicholls/.pub-cache/hosted/pub.dartlang.org/async-2.5.0-nullsafety.3",
       "packageUri": "lib/",
@@ -81,7 +87,7 @@
     },
     {
       "name": "flutter_svg",
-      "rootUri": "file:///Users/adamnicholls/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.19.2+1",
+      "rootUri": "file:///Users/adamnicholls/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.18.1",
       "packageUri": "lib/",
       "languageVersion": "2.2"
     },
@@ -296,7 +302,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2021-01-25T08:59:23.334368Z",
+  "generated": "2021-01-25T15:55:36.363502Z",
   "generator": "pub",
   "generatorVersion": "2.12.0-253.0.dev"
 }
