@@ -1,4 +1,4 @@
-# Obsucra - VERSION: 0.7.1.0752-pre
+# Obsucra - VERSION: 1.0.0-pre
 ## *Status: In-Development -> Unpublished*
 
 ### About
@@ -12,14 +12,30 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 # Obscura Change-log
 
 ### 25th January 2021
+***!!! NOTE: Any build numbers < 1000 are no longer compatible with this branch. Under no circumstance must a branch with build <1000 be mirgrated. Exception: BUILD: 0781 !!!***
+#### VERSION: 1.0.0-pre
+1. All branches merged to flutter master channel
+2. Linked App Bar to profileSplashscreen.dart
+3. Updated all dependicies
+4. Added *adobe_xd* dependicie
+
+#### Known Issues
+1. Profile Pages don't link to the data sets */lib/Global_Components/Fake_Data*
+2. Profile pages ain't stateless
+3. Decrepit use of FlatButton
+4. No Glide Animation
+5. No Use of App Bar Sliver
+6. Over use of shadows on tabs (Accessability Issue)
+
+#### VERSION: 0.7.1.0752-pre
 1. Refactored Login and Register Screens
 2. Changed from Stateless to Stateful
 3. Add pages to Navigator
-4. Created Custom Fade Page Transition in /lib/Global_Components
+4. Created Custom Fade Page Transition in */lib/Global_Components*
 5. Added Hero animation to SVGs
 6. Adjusted look of TextAreas 
 7. Addded onPress function to buttons
-8. Created channelData class in /lib/Global_Companents/Fake_Data
+8. Created channelData class in */lib/Global_Companents/Fake_Data*
 
 #### Patch Notes
 1. Fixed Navigation bar being able to call itself
@@ -34,15 +50,15 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 4. Navigation stack needlesly stacking screens in memory
 
 ### 24th January 2021
-1. Added new Dependency flutter_svg to handle .svg files
+1. Added new Dependency *flutter_svg* to handle .svg files
 2. Implemented register and back buttons to login and register screens respectively
 3. Enabled apple login hiding
 4. Edited file structure to fit new paths
 5. Added svg corner art
 6. Fixed issue with the padding surrounding buttons not existing
 7. Fixed an indentation issue with assets in pubspec.yaml
-8. Added path_provider dependancy to manage photos
-9. Added image_picker dependancy to manage photos
+8. Added *path_provider* dependancy to manage photos
+9. Added *image_picker* dependancy to manage photos
 10. Added camera functionality to app
 11. Made bottom navigation bar active
 12. Added ability for pages to pass their index number to navigation bar
@@ -63,8 +79,8 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 6. Changed android manifest
 7. Linked Obscura to assets folder
 8. Fixed dependicines issue
-9. Added loading_animations dependancy for splashscreen
-10. Restructered Fake Data assets loacated in /lib/Global_Components/Fake_Data
+9. Added *loading_animations* dependancy for splashscreen
+10. Restructered Fake Data assets loacated in */lib/Global_Components/Fake_Data*
 
 #### Known Issues
 1. No lazy loading
@@ -95,21 +111,21 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 1. main branch file structure has been modified
    - .gitignore now added
    - removed user based dependencies
-   - added hello_world.dart as example screen
+   - added *hello_world.dart* as example screen
 2. New file structure instructions published to teams
-3. Created new components folder /lib/LoginReg
+3. Created new components folder */lib/LoginReg*
 4. Implemented TextFormFields for the login and register form fields
 5. Implemented a RegisterColumn to hold the four buttons desired
 6. Completed an initial version of the login and register screens
 
 
 ### 18th January 2021
-1. Created new components folder /lib/LoginReg
+1. Created new components folder */lib/LoginReg*
 2. Implemented ElevatedButtons for the various LoginButtons
 3. Implemented a LoginButtonColumn to hold the four buttons desired
 
 ### 14th January 2021
-1. Created baseAppBar.dart in **/lib/components**
+1. Created baseAppBar.dart in */lib/components*
    - This was done to make it easier to produce a uniformed app bar experience accross app pages.
 
 ### 11th January 2021
