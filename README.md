@@ -9,7 +9,7 @@ Obscura will also use Geo-Location to allow images to be mapped to were they wer
 ### Intended Platforms
 Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web by **1st April 2021** *(STC)*
 
-# Obscura Changelog
+# Obscura Change-log
 
 ### 25th January 2021
 1. Refactored Login and Register Screens
@@ -20,12 +20,13 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 6. Adjusted look of TextAreas 
 7. Addded onPress function to buttons
 8. Created channelData class in /lib/Global_Companents/Fake_Data
+9. Fixed Navigation bar being able to call itself
 
 #### Known Issues
 1. Can't fetch input from TextArea
 2. No Error identification for use
 3. No block prevent progression to Feed without an account
-4. Navigation can call current page
+4. Navigation stack needlesly stacking screens in memory
 
 ### 24th January 2021
 1. Added new Dependency flutter_svg to handle .svg files
@@ -46,6 +47,7 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 1. Keyboard disrupts screen widgets
 2. SVG incorrectly displayed
 3. App doesn't save images
+4. Nav Bar can call active page, adding to navigation stack
 
 ### 23rd January 2021
 1. Created a Comments screen
