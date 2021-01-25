@@ -23,6 +23,7 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 9. Fixed Navigation bar being able to call itself
 10. Fixed SVGs not displaying correctly
 11. Fixed Keyboard from disrupting the widgets which should of been immutable
+12. Improved iOS compatability
 
 #### Known Issues
 1. Can't fetch input from TextArea
