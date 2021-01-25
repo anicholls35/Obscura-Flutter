@@ -1,4 +1,4 @@
-# Obsucra - Photo Based Social Media Platform
+# Obsucra - Photo Based Social Media Platform (Ver. 0.7.0-pre)
 ## *Status: In-Development -> Unpublished*
 
 ### About
