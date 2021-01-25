@@ -27,17 +27,21 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-      primary: this.buttonColor,
-      textStyle: this.textStyle,
-      shape: new RoundedRectangleBorder(
-        borderRadius: new BorderRadius.circular(30.0),
-      ),
+    return Padding(
       padding: this.paddingInsets,
-      ),
-      onPressed: () {},
-      child: Text(this.buttonText)
-    );
+      child:
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: this.buttonColor,
+            textStyle: this.textStyle,
+            shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(30.0),
+            ),
+            padding: this.edgeInsetsGeometry,
+          ),
+          onPressed: () {},
+          child: Text(this.buttonText)
+    ),)
+      ;
   }
 }

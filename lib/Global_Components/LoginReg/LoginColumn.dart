@@ -14,6 +14,7 @@ class LoginColumn extends StatelessWidget {
   final EdgeInsetsGeometry formPaddingInsets = EdgeInsets.symmetric(vertical: 6);
   final EdgeInsetsGeometry formEdgeInsetsGeometry = EdgeInsets.all(12);
   final TextStyle formTextStyle = new TextStyle(fontSize: 12, fontWeight: FontWeight.bold,);
+
   //Shared Values
 
 
@@ -50,11 +51,14 @@ class LoginColumn extends StatelessWidget {
              Expanded(child: LoginButton(buttonText: "LOGIN WITH GOOGLE", buttonColor: Colors.red, textStyle: this.buttonTextStyle, edgeInsetsGeometry: this.buttonEdgeInsetsGeometry, paddingInsets: buttonPaddingInsets,), flex: 2,),
              Spacer(flex: 1,),
            ]),
-           Row(children: [
-             Spacer(flex: 1,),
-             Expanded(child: LoginButton(buttonText: "LOGIN WITH APPLE", buttonColor: Colors.black, textStyle: this.buttonTextStyle, edgeInsetsGeometry: this.buttonEdgeInsetsGeometry, paddingInsets: buttonPaddingInsets,), flex: 2,),
-             Spacer(flex: 1,),
-           ]),
+           Visibility(
+               child: Row(children: [
+                 Spacer(flex: 1,),
+                 Expanded(child: LoginButton(buttonText: "LOGIN WITH APPLE", buttonColor: Colors.black, textStyle: this.buttonTextStyle, edgeInsetsGeometry: this.buttonEdgeInsetsGeometry, paddingInsets: buttonPaddingInsets,), flex: 2,),
+                 Spacer(flex: 1,),
+               ]),
+           )
+
          ]
      );
   }

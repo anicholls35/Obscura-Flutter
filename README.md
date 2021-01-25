@@ -31,3 +31,14 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 2. Implemented TextFormFields for the login and register form fields
 3. Implemented a RegisterColumn to hold the four buttons desired
 4. Completed an initial version of the login and register screens
+
+## 24th January 2021
+1. Added new Dependency flutter_svg to handle .svg files
+2. Implemented register and back buttons to login and register screens respectively
+3. Enabled apple login hiding
+4. Edited file structure to fit new paths
+5. Added svg corner art (Currently broken. File needs redoing)
+6. Fixed issue with the padding surrounding buttons not existing
+7. Fixed an indentation issue with assets in pubspec.yaml
+TODO: Find a way to hide bottom container on Keyboard Open. This will require the use of listeners. To be discussed.
+TODO: Figure out how Callbacks work. Need help. At time of writing, unable to understand.

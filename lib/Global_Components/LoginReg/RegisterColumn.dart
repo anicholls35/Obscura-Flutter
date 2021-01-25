@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:obscura/constants.dart';
@@ -42,7 +44,7 @@ class RegisterColumn extends StatelessWidget {
           ]),
           Row(children: [
             Spacer(flex: 1,),
-            Expanded(child: LoginButton(buttonText: "LOGIN", buttonColor: accentColour, textStyle: this.buttonTextStyle, edgeInsetsGeometry: this.buttonEdgeInsetsGeometry, paddingInsets: buttonPaddingInsets,), flex: 2,),
+            Expanded(child: LoginButton(buttonText: "REGISTER", buttonColor: accentColour, textStyle: this.buttonTextStyle, edgeInsetsGeometry: this.buttonEdgeInsetsGeometry, paddingInsets: buttonPaddingInsets,), flex: 2,),
             Spacer(flex: 1,),
           ]),
           Row(children: [
@@ -55,11 +57,14 @@ class RegisterColumn extends StatelessWidget {
             Expanded(child: LoginButton(buttonText: "LOGIN WITH GOOGLE", buttonColor: Colors.red, textStyle: this.buttonTextStyle, edgeInsetsGeometry: this.buttonEdgeInsetsGeometry, paddingInsets: buttonPaddingInsets,), flex: 2,),
             Spacer(flex: 1,),
           ]),
-          Row(children: [
-            Spacer(flex: 1,),
-            Expanded(child: LoginButton(buttonText: "LOGIN WITH APPLE", buttonColor: Colors.black, textStyle: this.buttonTextStyle, edgeInsetsGeometry: this.buttonEdgeInsetsGeometry, paddingInsets: buttonPaddingInsets,), flex: 2,),
-            Spacer(flex: 1,),
-          ]),
+          Visibility(
+            child: Row(children: [
+              Spacer(flex: 1,),
+              Expanded(child: LoginButton(buttonText: "LOGIN WITH APPLE", buttonColor: Colors.black, textStyle: this.buttonTextStyle, edgeInsetsGeometry: this.buttonEdgeInsetsGeometry, paddingInsets: buttonPaddingInsets,), flex: 2,),
+              Spacer(flex: 1,),
+            ]),
+            visible: Platform.isIOS,
+          ),
         ]
     );
   }
