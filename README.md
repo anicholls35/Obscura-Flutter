@@ -1,4 +1,4 @@
-# Obsucra - VERSION: 0.7.1-pre
+# Obsucra - VERSION: 0.7.1.0752-pre
 ## *Status: In-Development -> Unpublished*
 
 ### About
