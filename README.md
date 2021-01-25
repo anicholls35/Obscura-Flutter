@@ -1,4 +1,4 @@
-# Obsucra - Photo Based Social Media Platform (Ver. 0.7.0-pre)
+# Obsucra - Photo Based Social Media Platform (Ver. 0.7.1-pre)
 ## *Status: In-Development -> Unpublished*
 
 ### About
@@ -20,10 +20,12 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 6. Adjusted look of TextAreas 
 7. Addded onPress function to buttons
 8. Created channelData class in /lib/Global_Companents/Fake_Data
-9. Fixed Navigation bar being able to call itself
-10. Fixed SVGs not displaying correctly
-11. Fixed Keyboard from disrupting the widgets which should of been immutable
-12. Improved iOS compatability
+
+#### Patch Notes
+1. Fixed Navigation bar being able to call itself
+2. Fixed SVGs not displaying correctly
+3. Fixed Keyboard from disrupting the widgets which should of been immutable
+4. Improved iOS compatability
 
 #### Known Issues
 1. Can't fetch input from TextArea
