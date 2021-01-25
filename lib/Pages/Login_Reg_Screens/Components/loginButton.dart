@@ -27,6 +27,8 @@ class LoginButton extends StatelessWidget {
     return Padding(
       padding: this.paddingInsets,
       child: ElevatedButton(
+          onPressed: () {},
+          child: Text(this.buttonText),
           style: ElevatedButton.styleFrom(
             minimumSize: Size(20, 20),
             primary: this.buttonColor,
@@ -36,8 +38,7 @@ class LoginButton extends StatelessWidget {
             ),
             padding: this.edgeInsetsGeometry,
           ),
-          onPressed: () {},
-          child: Text(this.buttonText)),
+      ),
     );
   }
 }

@@ -1,4 +1,4 @@
-#Mon Jan 25 03:04:13 GMT 2021
-base.0=/Users/adamnicholls/Documents/FlutterProjects/obscura/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Mon Jan 25 04:00:21 GMT 2021
+base.0=C\:\\Users\\Lexie\\Documents\\GitHub\\Obsucra-Flutter\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
