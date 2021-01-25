@@ -33,7 +33,7 @@ class LoginFormField extends StatelessWidget {
             filled: true,
             fillColor: this.fillColor,
             border: OutlineInputBorder(
-              borderRadius: new BorderRadius.circular(10.0),
+              borderRadius: new BorderRadius.circular(4.0),
             ),
           ),
         ));

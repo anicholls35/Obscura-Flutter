@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:obscura/Pages/Channel_Select/ChannelSelect.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/login.dart';
 import 'package:obscura/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -18,7 +19,7 @@ class _SplashScreen extends State<SplashScreen> {
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => Login(),
+          builder: (context) => ChannelSelect(),
         ),
       ),
     );
