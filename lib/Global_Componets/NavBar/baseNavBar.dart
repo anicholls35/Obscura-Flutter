@@ -54,28 +54,32 @@ class _BaseNavBar extends State<BaseNavBar> {
           ),
         ],
         onTap: (index) {
-          setState(() {
-            switch (index) {
-              case 0:
-                {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Feed(),
-                      ));
+          setState(
+            () {
+              if (index != _currentIndex) {
+                switch (index) {
+                  case 0:
+                    {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Feed(),
+                          ));
+                    }
+                    break;
+                  case 2:
+                    {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Camera(),
+                          ));
+                    }
+                    break;
                 }
-                break;
-              case 2:
-                {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Camera(),
-                      ));
-                }
-                break;
-            }
-          });
+              }
+            },
+          );
         });
   }
 }
