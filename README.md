@@ -1,4 +1,4 @@
-# Obsucra - BUILD: 10401
+# Obsucra - VERSION: 1.0.2.1040+432-pre
 ## *Status: In-Development -> Unpublished*
 
 ### About
@@ -12,7 +12,14 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 # Obscura Change-log
 
 ### 27th January 2021
-#### Patch Notes
+#### Patch Notes (#1040+432)
+1. Make feed posts responsive to devices screen size
+2. Allow users to click a full screen post to see full screen image
+
+#### Known Issues
+1. Image View doesn't allow pan and zoom
+
+#### Patch Notes (#10411)
 1. Added swipe down to go back on comments screen
 2. Added swipe right to go back on full screen posts
 3. Added swipe down to go back on full screen posts
