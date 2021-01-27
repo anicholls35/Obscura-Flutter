@@ -254,6 +254,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "swipe_gesture_recognizer",
+      "rootUri": "file:///Users/adamnicholls/.pub-cache/hosted/pub.dartlang.org/swipe_gesture_recognizer-0.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///Users/adamnicholls/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.0-nullsafety.3",
       "packageUri": "lib/",
@@ -302,7 +308,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2021-01-25T15:55:36.363502Z",
+  "generated": "2021-01-27T09:10:43.309807Z",
   "generator": "pub",
   "generatorVersion": "2.12.0-253.0.dev"
 }
