@@ -1,4 +1,4 @@
-# Obsucra - VERSION: 1.0.0-pre
+# Obsucra - VERSION: 1.0.1.10411-pre
 ## *Status: In-Development -> Unpublished*
 
 ### About
@@ -10,6 +10,12 @@ Obscura will also use Geo-Location to allow images to be mapped to were they wer
 Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web by **1st April 2021** *(STC)*
 
 # Obscura Change-log
+
+### 27th January 2021
+#### Patch Notes
+1. Added swipe down to go back on comments screen
+2. Added swipe right to go back on full screen posts
+3. Added swipe down to go back on full screen posts
 
 ### 25th January 2021
 ***!!! NOTE: Any build numbers which start with #0 are no longer compatible with this branch. Under no circumstance must a branch with build starting with #0 be migrated. Exception: BUILD: 0781 !!!***
