@@ -1,4 +1,4 @@
-# Obsucra - BUILD: 1067286
+# Obsucra - BUILD: 106/7/286
 ## *Status: In-Development -> Unpublished*
 
 ### About
@@ -12,6 +12,12 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 # Obscura Change-log
 
 ### 27th January 2021
+1. Created Profile Overview Page
+2. Created Profile Container Page
+3. Made comments sliver reactive
+4. Made Images able to be Asset or Network base
+5. Added values to fakeData - users
+
 #### Patch Notes (#1047+482)
 1. Made Channel Cards react to screen size
 2. Locked app's rotation in portrait mode
