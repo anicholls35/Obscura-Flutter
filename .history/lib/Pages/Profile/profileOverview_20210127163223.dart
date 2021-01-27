@@ -41,12 +41,7 @@ class ProfileOverview extends StatelessWidget {
             child: GestureDetector(
               onTap: () {
                 print('Tap Detected');
-                Navigator.push(
-                  context,
-                  FadeRoute(
-                    page: ImageView(image: users[0].profilePicture),
-                  ),
-                );
+                Navigator.push(context, FadeRoute(page: ImageView(image)))
               },
               child: ProfileFull(pImage: users[0].profilePicture),
             ),

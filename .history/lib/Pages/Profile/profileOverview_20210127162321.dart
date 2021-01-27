@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:obscura/Global_Componets/Buttons/popButton.dart';
 import 'package:obscura/Global_Componets/Dummy_Assets/fakeData.dart';
-import 'package:obscura/Global_Componets/fadeRoute.dart';
-import 'package:obscura/Pages/Full_Screen_Post/Components/imageView.dart';
 import 'package:obscura/Pages/Profile/Components/profileFull.dart';
-import 'package:obscura/Pages/Profile/profileContaints.dart';
 import 'package:swipe_gesture_recognizer/swipe_gesture_recognizer.dart';
 
 class ProfileOverview extends StatelessWidget {
@@ -30,26 +27,9 @@ class ProfileOverview extends StatelessWidget {
           //UserPic
           SwipeGestureRecognizer(
             onSwipeUp: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      ProfileContaints(image: users[0].profilePicture),
-                ),
-              );
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ,))
             },
-            child: GestureDetector(
-              onTap: () {
-                print('Tap Detected');
-                Navigator.push(
-                  context,
-                  FadeRoute(
-                    page: ImageView(image: users[0].profilePicture),
-                  ),
-                );
-              },
-              child: ProfileFull(pImage: users[0].profilePicture),
-            ),
+            child: ProfileFull(pImage: users[0].profilePicture),
           ),
           //Back Button
           Positioned(
