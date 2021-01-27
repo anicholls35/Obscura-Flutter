@@ -1,4 +1,4 @@
-# Obsucra - VERSION: 1.0.2.1040+432-pre
+# Obsucra - VERSION: 1.0.3.10391-pre
 ## *Status: In-Development -> Unpublished*
 
 ### About
@@ -12,6 +12,9 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 # Obscura Change-log
 
 ### 27th January 2021
+#### Patch Notes (#10391)
+1. Updated iOS storyboard for splashscreen *(Affects iOS devices only)*
+
 #### Patch Notes (#1040+432)
 1. Make feed posts responsive to devices screen size
 2. Allow users to click a full screen post to see full screen image
