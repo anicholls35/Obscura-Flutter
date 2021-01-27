@@ -1,4 +1,4 @@
-# Obsucra - VERSION: 1.0.3.10391-pre
+# Obsucra - VERSION: 1.0.4.1047+482-pre
 ## *Status: In-Development -> Unpublished*
 
 ### About
@@ -12,6 +12,13 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS and Web b
 # Obscura Change-log
 
 ### 27th January 2021
+#### Patch Notes (#1047+482)
+1. Made Channel Cards react to screen size
+2. Locked app's rotation in portrait mode
+
+#### Patch Notes (#10461)
+1. Image View allows Pan & Zoom of images
+
 #### Patch Notes (#10391)
 1. Updated iOS storyboard for splashscreen *(Affects iOS devices only)*
 
