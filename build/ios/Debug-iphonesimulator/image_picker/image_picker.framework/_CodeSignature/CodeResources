@@ -26,7 +26,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tPDvJ9m2r8vHum1DUZSRVmVJ0y4=
+		1tSr0YnZlgJHlPb5HEHr0NptSnY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -37,10 +37,6 @@
 	<dict>
 		<key>Headers/FLTImagePickerImageUtil.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ZpV0IVvZe+QoN9ibIdFjySW71JA=
-			</data>
 			<key>hash2</key>
 			<data>
 			uWz8TGF+yprQwUKFeOhQaAvkv41ByTh8engTR2iZynw=
@@ -48,10 +44,6 @@
 		</dict>
 		<key>Headers/FLTImagePickerMetaDataUtil.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			+0nZlYdgG2C050GBEYmQPWB3q4Q=
-			</data>
 			<key>hash2</key>
 			<data>
 			d91apzZ4hREU+kZsQBxkdfOrQdsMiiPI/Fz5pRdiQK4=
@@ -59,10 +51,6 @@
 		</dict>
 		<key>Headers/FLTImagePickerPhotoAssetUtil.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			EWaT3q4MsX6JiAEKP6Vo0360Sb4=
-			</data>
 			<key>hash2</key>
 			<data>
 			yM7wCYEFBoiPOqzQk+Czud7k2n4GVMHtpT9xfmRUm48=
@@ -70,10 +58,6 @@
 		</dict>
 		<key>Headers/FLTImagePickerPlugin.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			H5R7WXPW3yF/8ozwhPvmI8zBbXg=
-			</data>
 			<key>hash2</key>
 			<data>
 			j6apStX+NCIs4YGL4C6WnqJYRVcD/tLX5Zm8it3w8J8=
@@ -81,10 +65,6 @@
 		</dict>
 		<key>Headers/image_picker-umbrella.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			GrAEiEM3kQRdMleQNy0jtG/KCp4=
-			</data>
 			<key>hash2</key>
 			<data>
 			UC8uUQh0PNF3WNOSzpEF5dmV1WqO/LMkjVBrGYoRObI=
@@ -92,10 +72,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FkT46fSjvT+d0jUKMdp1vMjrHB4=
-			</data>
 			<key>hash2</key>
 			<data>
 			esQ6um240DwJMifgqWNrU4F6nL3YH3JdNylXuJl8SIo=
