@@ -38,9 +38,7 @@ class ProfileOverview extends StatelessWidget {
                 ),
               );
             },
-            onSwipeRight: () {
-              Navigator.pop(context);
-            },
+            
             child: GestureDetector(
               onTap: () {
                 print('Tap Detected');

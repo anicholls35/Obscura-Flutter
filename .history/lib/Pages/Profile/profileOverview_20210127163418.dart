@@ -39,7 +39,7 @@ class ProfileOverview extends StatelessWidget {
               );
             },
             onSwipeRight: () {
-              Navigator.pop(context);
+              Navigator.pop(context)
             },
             child: GestureDetector(
               onTap: () {

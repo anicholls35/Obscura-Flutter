@@ -66,7 +66,7 @@ class _Comments extends State<Comments> {
           SliverAppBar(
             title: Text('Comments'),
             centerTitle: true,
-            expandedHeight: MediaQuery.of(context).size.height * 0.3,
+            expandedHeight: MediaQuery.of(context).size.height * 0.2,
             pinned: true,
             elevation: 20,
             forceElevated: true,
