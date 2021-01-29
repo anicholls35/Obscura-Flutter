@@ -1,0 +1,1 @@
+class ProfilePosts exten
