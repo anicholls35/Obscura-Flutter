@@ -2,18 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:obscura/constants.dart';
+import 'dart:math';
 
 
-class ChannelButton extends StatefulWidget {
-  //Fields
+class ChannelButton extends StatelessWidget {
+  //Channel Fields
   final String channelName;
   final NetworkImage channelImage;
   final int subscribers;
+
+  //Looks Fields
   final EdgeInsetsGeometry edgeInsetsGeometry;
   final EdgeInsetsGeometry paddingInsets;
 
-  final double maxSize = 100000;
-  final double growthRate = 5;
+  //Size Fields
+  final double multiplier = 30;
+  final double curveRate = 10;
+  final double maxSize = 1000;
 
 
   //Constructor
@@ -27,10 +32,10 @@ class ChannelButton extends StatefulWidget {
       : super(key: key);
 
 
-  double size(double maxSize, double growthRate, int subscribers) {
-    double temp = (0 - (growthRate) / (subscribers.toDouble()) + maxSize);
-    if (temp < 100){
-      return 100;
+  double size(double multiplier, double curveRate, int subscribers) {
+    double temp = multiplier * log((curveRate*subscribers)+1);
+    if (temp > maxSize){
+      return maxSize;
     } else{
       return temp;
     }
@@ -39,8 +44,8 @@ class ChannelButton extends StatefulWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      width: size(maxSize, growthRate, subscribers),
-      height: size(maxSize, growthRate, subscribers),
+      width: size(multiplier, curveRate, subscribers),
+      height: size(multiplier, curveRate, subscribers),
       child: Padding(
           padding: this.paddingInsets,
           child:
