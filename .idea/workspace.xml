@@ -28,7 +28,7 @@
     <list default="true" id="865edcc0-fae9-4908-a7f5-a64aa7de0664" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Pages/Channel_Select/ChannelSelect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/Channel_Select/ChannelSelect.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Pages/Channel_Select/Components/channelButton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/Channel_Select/Components/channelButton.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Pages/Channel_Select/Components/channelButton.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -97,22 +96,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="375" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1611552761107" />
-    <state width="1340" height="265" key="GridCell.Tab.0.bottom" timestamp="1611974496146">
+    <state width="1340" height="265" key="GridCell.Tab.0.bottom" timestamp="1612017745118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611974496146" />
-    <state width="1340" height="265" key="GridCell.Tab.0.center" timestamp="1611974496146">
+    <state width="1340" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612017745118" />
+    <state width="1340" height="265" key="GridCell.Tab.0.center" timestamp="1612017745118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="265" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611974496146" />
-    <state width="1340" height="265" key="GridCell.Tab.0.left" timestamp="1611974496146">
+    <state width="1340" height="265" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612017745118" />
+    <state width="1340" height="265" key="GridCell.Tab.0.left" timestamp="1612017745118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="265" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611974496146" />
-    <state width="1340" height="265" key="GridCell.Tab.0.right" timestamp="1611974496146">
+    <state width="1340" height="265" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612017745118" />
+    <state width="1340" height="265" key="GridCell.Tab.0.right" timestamp="1612017745118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611974496146" />
+    <state width="1340" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612017745118" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611555673337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
