@@ -19,6 +19,7 @@ class ChannelButton extends StatelessWidget {
   final double multiplier = 30;
   final double curveRate = 10;
   final double maxSize = 1000;
+  final double minSize = 10;
 
 
   //Constructor
@@ -36,7 +37,9 @@ class ChannelButton extends StatelessWidget {
     double temp = multiplier * log((curveRate*subscribers)+1);
     if (temp > maxSize){
       return maxSize;
-    } else{
+    } else if (temp < minSize){
+      return minSize;
+    } else {
       return temp;
     }
   }
