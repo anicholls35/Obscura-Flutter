@@ -39,6 +39,14 @@ class ChannelSelect extends StatelessWidget {
             ),
           ),
           ChannelButton(channelName: "Zoomie", channelImage: NetworkImage("https://www.lolwot.com/wp-content/uploads/2015/12/10-of-the-most-awe-inspiring-landscapes-in-the-world-7.jpg"), subscribers: 2000, edgeInsetsGeometry: EdgeInsets.all(10), paddingInsets: EdgeInsets.all(10)),
+          PageView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                ChannelButton(channelName: "Zoomie", channelImage: NetworkImage("https://www.lolwot.com/wp-content/uploads/2015/12/10-of-the-most-awe-inspiring-landscapes-in-the-world-7.jpg"), subscribers: 2000, edgeInsetsGeometry: EdgeInsets.all(10), paddingInsets: EdgeInsets.all(10)),
+                ChannelButton(channelName: "Zoomie", channelImage: NetworkImage("https://www.lolwot.com/wp-content/uploads/2015/12/10-of-the-most-awe-inspiring-landscapes-in-the-world-7.jpg"), subscribers: 2000, edgeInsetsGeometry: EdgeInsets.all(10), paddingInsets: EdgeInsets.all(10)),
+                ChannelButton(channelName: "Zoomie", channelImage: NetworkImage("https://www.lolwot.com/wp-content/uploads/2015/12/10-of-the-most-awe-inspiring-landscapes-in-the-world-7.jpg"), subscribers: 2000, edgeInsetsGeometry: EdgeInsets.all(10), paddingInsets: EdgeInsets.all(10)),
+              ],
+          ),
         ],
       ),
     );

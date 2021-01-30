@@ -28,10 +28,8 @@
     <list default="true" id="865edcc0-fae9-4908-a7f5-a64aa7de0664" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Pages/Channel_Select/ChannelSelect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/Channel_Select/ChannelSelect.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Pages/Channel_Select/Components/channelButton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/Channel_Select/Components/channelButton.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,22 +98,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="375" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1611552761107" />
-    <state width="1340" height="265" key="GridCell.Tab.0.bottom" timestamp="1611956658476">
+    <state width="1340" height="265" key="GridCell.Tab.0.bottom" timestamp="1611973547263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611956658476" />
-    <state width="1340" height="265" key="GridCell.Tab.0.center" timestamp="1611956658476">
+    <state width="1340" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611973547263" />
+    <state width="1340" height="265" key="GridCell.Tab.0.center" timestamp="1611973547263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="265" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611956658476" />
-    <state width="1340" height="265" key="GridCell.Tab.0.left" timestamp="1611956658476">
+    <state width="1340" height="265" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611973547263" />
+    <state width="1340" height="265" key="GridCell.Tab.0.left" timestamp="1611973547263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="265" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611956658476" />
-    <state width="1340" height="265" key="GridCell.Tab.0.right" timestamp="1611956658476">
+    <state width="1340" height="265" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611973547263" />
+    <state width="1340" height="265" key="GridCell.Tab.0.right" timestamp="1611973547263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611956658476" />
+    <state width="1340" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611973547263" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611555673337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
