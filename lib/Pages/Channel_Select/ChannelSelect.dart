@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:obscura/constants.dart';
 
+import 'Components/ChannelListing.dart';
+
 
 class ChannelSelect extends StatelessWidget {
   @override
@@ -20,6 +22,7 @@ class ChannelSelect extends StatelessWidget {
             height: double.infinity,
             color: primaryColour,
           ),
+          ChannelListing(),
         ],
       ),
     );

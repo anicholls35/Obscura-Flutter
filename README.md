@@ -126,3 +126,11 @@ samples, guidance on mobile development, and a full API reference.
     b. TODO: Add gradients and frills
     c. TODO: Pass on click functions for individual buttons
     d. TODO: Refactor buttons to use channel class instead of dummy data
+
+### 3rd Feb 2021
+1. After many failed prototypes, refactored design for channel select screen
+2. Implemented basic version of channel select screen
+    a. TODO: Convert grid to Stateful widget in order to dynamically add more channel cards.
+    b. TODO: Add gradients and frills
+    c. TODO: Pass on click functions for individual buttons
+    d. TODO: Refactor buttons to use channel class instead of dummy data
