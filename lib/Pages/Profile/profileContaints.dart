@@ -42,11 +42,12 @@ class _ProfileContaints extends State<ProfileContaints>
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     List<Widget> pages = [
       ProfilePosts(),
-      FollowingFollowers(color: Colors.blue),
-      FollowingFollowers(color: Colors.yellow),
+      FollowingFollowers(),
+      FollowingFollowers(
+        following: false,
+      ),
     ];
     return Scaffold(
       body: NestedScrollView(
