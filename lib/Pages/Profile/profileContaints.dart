@@ -15,47 +15,29 @@ class ProfileContaints extends StatefulWidget {
   _ProfileContaints createState() => _ProfileContaints(image);
 }
 
-class _ProfileContaints extends State<ProfileContaints> {
+class _ProfileContaints extends State<ProfileContaints>
+    with SingleTickerProviderStateMixin {
+  TabController _tabController;
+  ScrollController _scrollViewController;
   Image _image;
 
   _ProfileContaints(this._image);
 
-  List<Widget> _getItems() {
-    List<Container> _commentCards = [];
-    for (int i = 0; i < posts[0].comments; i++) {
-      _commentCards.add(Container(
-        width: MediaQuery.of(context).size.width * 0.8,
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          border: Border(
-            bottom: BorderSide(
-              width: 2.0,
-              color: Color(0xff424242),
-            ),
-          ),
-        ),
-        child: Row(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(right: 20),
-              width: 33,
-              height: 33,
-              decoration: BoxDecoration(
-                border: Border.all(color: accentColour),
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: posts[0].uploader.profilePicture.image,
-                ),
-              ),
-            ),
-            Flexible(child: genComments()),
-          ],
-        ),
-      ));
-    }
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(
+      vsync: this,
+      length: 3,
+    );
+    _scrollViewController = ScrollController();
+  }
 
-    return _commentCards;
+  @override
+  void dispose() {
+    _tabController.dispose();
+    _scrollViewController.dispose();
+    super.dispose();
   }
 
   @override
@@ -66,12 +48,11 @@ class _ProfileContaints extends State<ProfileContaints> {
       FollowingFollowers(color: Colors.blue),
       FollowingFollowers(color: Colors.yellow),
     ];
-    return DefaultTabController(
-      length: 3,
-      initialIndex: 0,
-      child: Scaffold(
-        body: CustomScrollView(
-          slivers: <Widget>[
+    return Scaffold(
+      body: NestedScrollView(
+        controller: _scrollViewController,
+        headerSliverBuilder: (BuildContext context, bool boxIsScrolled) {
+          return <Widget>[
             SliverAppBar(
               centerTitle: true,
               title: Text(users[0].userName),
@@ -83,9 +64,49 @@ class _ProfileContaints extends State<ProfileContaints> {
                 size: 20,
               ),
               shadowColor: primaryColour,
-              bottom: PreferredSize(
-                preferredSize: Size(size.width, 40),
-                child: ProfileTabBar(),
+              bottom: TabBar(
+                controller: _tabController,
+                tabs: <Widget>[
+                  Tab(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 5.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            'posts'.toUpperCase(),
+                          ),
+                          Text('10'),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Tab(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 5.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            'following'.toUpperCase(),
+                          ),
+                          Text('300'),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Tab(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 5.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            'followers'.toUpperCase(),
+                          ),
+                          Text('250'),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
               flexibleSpace: SwipeGestureRecognizer(
                 onSwipeDown: () {
@@ -103,21 +124,71 @@ class _ProfileContaints extends State<ProfileContaints> {
                 ),
               ),
             ),
-            SliverFillRemaining(
-              child: TabBarView(
-                children: pages,
-              ),
-            ),
-          ],
+          ];
+        },
+        body: TabBarView(
+          controller: _tabController,
+          children: pages,
         ),
       ),
     );
   }
+
+//   DefaultTabController buildDefaultTabController(BuildContext context, Size size, List<Widget> pages) {
+//     return DefaultTabController(
+//     length: 3,
+//     initialIndex: 0,
+//     child: Scaffold(
+//       body: CustomScrollView(
+//         slivers: <Widget>[
+//           SliverAppBar(
+//             centerTitle: true,
+//             title: Text(users[0].userName),
+//             expandedHeight: MediaQuery.of(context).size.height * 0.4,
+//             pinned: true,
+//             elevation: 20,
+//             forceElevated: true,
+//             leading: PopButton(
+//               size: 20,
+//             ),
+//             shadowColor: primaryColour,
+//             bottom: PreferredSize(
+//               preferredSize: Size(size.width, 40),
+//               child: ProfileTabBar(),
+//             ),
+//             flexibleSpace: SwipeGestureRecognizer(
+//               onSwipeDown: () {
+//                 Navigator.pop(context);
+//               },
+//               child: FlexibleSpaceBar(
+//                 background: Hero(
+//                   tag: 'image',
+//                   transitionOnUserGestures: true,
+//                   child: Image(
+//                     image: this._image.image,
+//                     fit: BoxFit.cover,
+//                   ),
+//                 ),
+//               ),
+//             ),
+//           ),
+//           SliverFillRemaining(
+//             child: TabBarView(
+//               children: pages,
+//             ),
+//           ),
+//         ],
+//       ),
+//     ),
+//   );
+//   }
 }
 
 class ProfileTabBar extends StatelessWidget {
-  const ProfileTabBar({
+  TabController tabController;
+  ProfileTabBar({
     Key key,
+    @required this.tabController,
   }) : super(key: key);
 
   @override
@@ -164,6 +235,7 @@ class ProfileTabBar extends StatelessWidget {
           ),
         ),
       ],
+      controller: tabController,
     );
   }
 }

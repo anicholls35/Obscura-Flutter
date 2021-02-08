@@ -15,11 +15,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ">=0.17.0 <0.19.0"
+  flutter_svg: ^0.20.0-nullsafety.3
   loading_animations: ^2.1.0
   path_provider: ^1.6.27
   image_picker: ^0.6.4
-  adobe_xd: ^1.0.0+1
   swipe_gesture_recognizer: ^0.0.2
   photo_view: ^0.10.3
 
