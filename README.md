@@ -10,6 +10,26 @@ Obscura will also use Geo-Location to allow images to be mapped to were they wer
 Lucky7's goal is to have Obscura to be functional on both Android, iOS, Web + Mac OS|Window|Linux by **1st April 2021** *(STC)*
 
 # Obscura Change-log
+### 8th February 2021
+1. Completed Post/Following/Followers page
+2. Implement a nested scroll view and shared tab controller
+3. Improved design with Slivers
+
+#### Known Issues
+1. No data is loaded
+
+### 3rd Febuary 2021
+#### Patch Notes (#07810)
+1. Implemented basic version of channel select screen
+2. Removed changes from 29th January Update
+
+### 29th January 2021
+1. Completed work on the initial version of the custom button for channel select screen
+2. Switched to a logarithmic function to determine size with a bounded maximum
+
+#### Known Issues
+1. Can't dynamically produce channel cards
+2. Buttons can't have individual onPress functions
 
 ### 27th January 2021
 1. Created Profile Overview Page
