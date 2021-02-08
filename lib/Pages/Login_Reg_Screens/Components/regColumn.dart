@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:obscura/Global_Componets/fadeRoute.dart';
+import 'package:obscura/Pages/Channel_Select/channelSelect.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/Components/loginButton.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/Components/loginFormField.dart';
 import 'package:obscura/constants.dart';
@@ -79,6 +81,12 @@ class RegisterColumn extends StatelessWidget {
             paddingInsets: buttonPaddingInsets,
             onPressed: () {
               print('Sign-up Pressed');
+              Navigator.pushReplacement(
+                context,
+                FadeRoute(
+                  page: ChannelSelect(),
+                ),
+              );
             },
           ),
         ),

@@ -20,7 +20,7 @@ final List<UserAccount> users = [
         'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'),
   ),
   UserAccount(
-    userName: 'Alex',
+    userName: 'Alex Debruin',
     profilePicture: Image.network(
         'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'),
   ),
