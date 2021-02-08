@@ -1,4 +1,4 @@
-# Obsucra - BUILD: 1067288
+# Obsucra - VERSION: 1.2.1+10678-pre
 ## *Status: In-Development -> Unpublished*
 
 ### About

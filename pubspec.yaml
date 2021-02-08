@@ -7,7 +7,7 @@ description: A social media platform with gamification for people to showcase th
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
 # Read more about versioning at semver.org.
-version: 1.0.4+1067284
+version: 1.2.1+10678-pre
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
