@@ -42,6 +42,7 @@ Known Issues **(OPTIONAL)**
 ## Working on an issue
 - Assign yourself to your choosen/given issue on the GitHub Site
 - Upon completion of an issue, submit a push request to GitHub
+    - Run: ```Flutter clean``` on final commit **before** submitting a pull request
     - Ensure you've assigned yourself to the push request
     - Tagged the means behind the issue (Bug, Enhanchment, etc)
     - Linked it to the Project
