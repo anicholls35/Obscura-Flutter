@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:obscura/Pages/Camera/camera.dart';
 import 'package:obscura/Pages/Feed/feed.dart';
+import 'package:obscura/Pages/Settings_Page/settings.dart';
 import 'package:obscura/constants.dart';
 
 class BaseNavBar extends StatefulWidget {
@@ -43,7 +44,7 @@ class _BaseNavBar extends State<BaseNavBar> {
             label: "Notifications",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.camera),
+            icon: Icon(Icons.camera_alt),
             label: "Camera",
           ),
           BottomNavigationBarItem(
@@ -76,6 +77,11 @@ class _BaseNavBar extends State<BaseNavBar> {
                           ));
                     }
                     break;
+                  case 4:
+                    {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Settings()));
+                    }
                 }
               }
             },
