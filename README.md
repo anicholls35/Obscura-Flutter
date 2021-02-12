@@ -9,7 +9,7 @@ Obscura will also use Geo-Location to allow images to be mapped to were they wer
 ### Intended Platforms
 Lucky7's goal is to have Obscura to be functional on both Android, iOS, Web + Mac OS|Window|Linux by **1st April 2021** *(STC)*
 
-***For aid in using this GitHub repo, please read the guidelines in the wiki section. There you'll aldo find useful links to aid in the development***
+***For aid in using this GitHub repo, please read the guidelines in the wiki section. There you'll also find useful links to aid in the development process***
 
 # Obscura Change-log
 ### 8th February 2021
