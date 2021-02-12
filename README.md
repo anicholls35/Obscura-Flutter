@@ -1,4 +1,4 @@
-# Obsucra - VERSION: 1.2.1+10678-demo
+# Obsucra - VERSION: 1.2.1-demo+10678
 ## *Status: In-Development -> Unpublished*
 
 ### About
