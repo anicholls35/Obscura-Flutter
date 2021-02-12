@@ -17,7 +17,8 @@ When working on the OBSCURA-FLUTTER Project please adhere to the following rules
 - Within the My_Page folder create another folder called Components which will hold all custom widgets you've made for the page (Making the main page more readable and components reusable if needed)
 ***All .dart files are to follow lowerCamalCase format***
 - Upon finishing up for the day commit any changes you've made to you're bench for backup reasons and title the commit with the changes you've made
-- Update the included BRANCH_CHANGELOG.md file with the changes/features you've added following the given format
+   - Remember to run ```flutter clean``` before hand
+- Update the included BRANCH_CHANGELOG.md file with the changes/features you've added following the given format (Do so before your commit so it’s published onto your branch)
 ```
 BUILD: #####
 Date
