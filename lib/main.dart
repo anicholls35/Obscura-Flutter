@@ -11,7 +11,8 @@ void main() {
 }
 
 /// main.dart is responsible for starting the app and dealing with Obscura's
-/// navigation. Pushing and Popping screens as needed.
+/// navigation. Pushing and Popping screens as needed. It's also where you setup
+/// website routes
 
 class Obscura extends StatelessWidget {
   @override

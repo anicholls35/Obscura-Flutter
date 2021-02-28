@@ -11,7 +11,7 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int _pageIndex = 4;
-    String versionNumber = '1.1.0-pre+12382';
+    String versionNumber = '1.3.1-pre+1238';
     return Scaffold(
       backgroundColor: primaryColour,
       appBar: BaseAppBar(

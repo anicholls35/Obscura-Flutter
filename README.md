@@ -1,4 +1,4 @@
-# Obsucra - VERSION: 1.2.1-demo+10678
+# Obsucra - VERSION: 1.3.1-pre+1238
 ## *Status: In-Development -> Unpublished*
 
 ### About
@@ -12,6 +12,15 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS, Web + Ma
 ***For aid in using this GitHub repo, please read the guidelines in the wiki section. There you'll also find useful links to aid in the development process***
 
 # Obscura Change-log
+### 12th Febuary 2021
+1. Created settings page
+2. Allowed custom colours to be passed to AppBar
+3. Allowed User Profile to be a back button in AppBar
+4. Enabled Settings page route in nav bar
+5. Changed Camera Icon on nav bar
+6. Created setting choice card widget
+7. Allow navigation page to be passed to setting choice widget for navigation
+
 ### 8th February 2021
 1. Completed Post/Following/Followers page
 2. Implement a nested scroll view and shared tab controller
