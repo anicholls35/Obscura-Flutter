@@ -1,4 +1,4 @@
-# Obsucra - VERSION: 1.3.1-pre+1238
+# Obsucra - VERSION: 2.0.0-pre
 ## *Status: In-Development -> Unpublished*
 
 ### About
@@ -12,6 +12,10 @@ Lucky7's goal is to have Obscura to be functional on both Android, iOS, Web + Ma
 ***For aid in using this GitHub repo, please read the guidelines in the wiki section. There you'll also find useful links to aid in the development process***
 
 # Obscura Change-log
+### 15th March 2021
+1. Updated the entire app & dependancies to run on Flutter Stable Channel (2.0.2)
+2. Linked app with Firebase Backend
+
 ### 12th Febuary 2021
 1. Created settings page
 2. Allowed custom colours to be passed to AppBar
