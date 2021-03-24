@@ -32,9 +32,10 @@ class Obscura extends StatelessWidget {
           create: (_) => AuthenticationService(FirebaseAuth.instance),
         ),
         StreamProvider(
-            create: (context) =>
-                context.read<AuthenticationService>().authStateChanges,
-            initialData: ""),
+          create: (context) =>
+              context.read<AuthenticationService>().authStateChanges,
+          initialData: null,
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -60,6 +61,8 @@ class AuthenticationWrapper extends StatelessWidget {
     final firebaseUser = context.watch<User>();
 
     if (firebaseUser != null) {
+      print("GOT HERE");
+      print(firebaseUser);
       //user logged in
       return Feed();
     }

@@ -95,6 +95,10 @@ class _LoginColumn extends State<LoginColumn> {
                   )
                   .then((res) {
                 if (res == "logged-in") {
+                  context.read<AuthenticationService>().getUser().then((user) {
+                    print("Got username: " + user.email);
+                    print("UID: " + user.uid);
+                  });
                   Navigator.pushReplacement(
                     context,
                     FadeRoute(

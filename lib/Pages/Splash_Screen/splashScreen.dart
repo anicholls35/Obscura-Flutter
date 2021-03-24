@@ -27,7 +27,6 @@ class _SplashScreen extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final firebaseUser = context.watch()<User>();
     final double width = MediaQuery.of(context).size.width;
     Widget topSvg =
         SvgPicture.asset('assets/Vectors/Corner-Art.svg', width: width * 1.5);

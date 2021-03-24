@@ -17,6 +17,10 @@ class AuthenticationService {
         return "No account linked to this email";
       } else if (e.code == "wrong-password") {
         return "Incorrect password";
+      } else if (email == "") {
+        return "email can't be empty";
+      } else if (password == "") {
+        return "password can't be empty";
       } else {
         return e.message;
       }
@@ -31,5 +35,15 @@ class AuthenticationService {
     } on FirebaseAuthException catch (e) {
       return e.message;
     }
+  }
+
+  Future<User> getUser() async {
+    return _firebaseAuth.currentUser;
+  }
+
+  Future<String> signOut() async {
+    String name = _firebaseAuth.currentUser.email;
+    _firebaseAuth.signOut();
+    return "Signed-out: " + name;
   }
 }
