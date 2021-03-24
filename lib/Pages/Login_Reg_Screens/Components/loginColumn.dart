@@ -107,21 +107,22 @@ class _LoginColumn extends State<LoginColumn> {
                   );
                 } else {
                   showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: Text("Sign-in Error"),
-                          content: Text(res),
-                          actions: <Widget>[
-                            TextButton(
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                              child: Text("Close"),
-                            ),
-                          ],
-                        );
-                      });
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text("Sign-in Error"),
+                        content: Text(res),
+                        actions: <Widget>[
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text("Close"),
+                          ),
+                        ],
+                      );
+                    },
+                  );
                 }
               });
             },
@@ -150,6 +151,22 @@ class _LoginColumn extends State<LoginColumn> {
             paddingInsets: buttonPaddingInsets,
             onPressed: () {
               print('google Pressed');
+              context
+                  .read<AuthenticationService>()
+                  .signInWithGoogle()
+                  .then((res) {
+                if (res == "logged-in") {
+                  Navigator.pushReplacement(
+                    context,
+                    FadeRoute(
+                      page: Feed(),
+                    ),
+                  );
+                } else {
+                  print("google failed");
+                  print(res);
+                }
+              });
             },
           ),
         ),

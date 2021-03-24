@@ -4,7 +4,11 @@ import 'package:obscura/Global_Componets/fadeRoute.dart';
 import 'package:obscura/Pages/Channel_Select/channelSelect.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/Components/loginButton.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/Components/loginFormField.dart';
+import 'package:obscura/Pages/Login_Reg_Screens/authentication_service.dart';
 import 'package:obscura/constants.dart';
+import 'package:provider/provider.dart';
+
+import '../../Channel_Select/channelSelect.dart';
 
 class RegisterColumn extends StatelessWidget {
   //Button Values
@@ -27,6 +31,16 @@ class RegisterColumn extends StatelessWidget {
     color: Colors.white,
   );
 
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final secondPasswordController = TextEditingController();
+
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    secondPasswordController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     //Width + Height
@@ -38,7 +52,8 @@ class RegisterColumn extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 50),
           child: LoginFormField(
-            formText: "username".toUpperCase(),
+            formText: "email".toUpperCase(),
+            controller: emailController,
             prefixIcon: Icon(Icons.email),
             textStyle: formTextStyle,
             edgeInsetsGeometry: formEdgeInsetsGeometry,
@@ -51,6 +66,7 @@ class RegisterColumn extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 50),
           child: LoginFormField(
             formText: "password".toUpperCase(),
+            controller: passwordController,
             prefixIcon: Icon(Icons.lock),
             textStyle: formTextStyle,
             edgeInsetsGeometry: formEdgeInsetsGeometry,
@@ -63,6 +79,7 @@ class RegisterColumn extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 50),
           child: LoginFormField(
             formText: "re-enter password".toUpperCase(),
+            controller: secondPasswordController,
             prefixIcon: Icon(Icons.lock),
             textStyle: formTextStyle,
             edgeInsetsGeometry: formEdgeInsetsGeometry,
@@ -81,12 +98,40 @@ class RegisterColumn extends StatelessWidget {
             paddingInsets: buttonPaddingInsets,
             onPressed: () {
               print('Sign-up Pressed');
-              Navigator.pushReplacement(
-                context,
-                FadeRoute(
-                  page: ChannelSelect(),
-                ),
-              );
+              context
+                  .read<AuthenticationService>()
+                  .signUp(
+                      email: emailController.text,
+                      password: passwordController.text,
+                      secondPassword: secondPasswordController.text)
+                  .then((res) {
+                if (res != "sign-up") {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text("Sign-up Error"),
+                        content: Text(res),
+                        actions: <Widget>[
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text("Close"),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                } else {
+                  Navigator.pushReplacement(
+                    context,
+                    FadeRoute(
+                      page: ChannelSelect(),
+                    ),
+                  );
+                }
+              });
             },
           ),
         ),
