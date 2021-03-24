@@ -1,11 +1,20 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:obscura/Pages/Login_Reg_Screens/authentication_service.dart';
 import 'package:obscura/Pages/Splash_Screen/splashScreen.dart';
 import 'package:obscura/constants.dart';
 import 'package:flutter/services.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
 
-void main() {
+import 'Pages/Feed/feed.dart';
+import 'Pages/Login_Reg_Screens/login.dart';
+import 'Pages/Splash_Screen/splashScreen.dart';
+
+Future<void> main() async {
   //Below 2 lines locks app in portrait orintation
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((value) => runApp(Obscura()));
 }
@@ -17,17 +26,45 @@ void main() {
 class Obscura extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Obscura',
-      theme: ThemeData(
-        primaryColor: primaryColour,
-        accentColor: accentColour,
-        scaffoldBackgroundColor: primaryColour,
+    return MultiProvider(
+      providers: [
+        Provider<AuthenticationService>(
+          create: (_) => AuthenticationService(FirebaseAuth.instance),
+        ),
+        StreamProvider(
+            create: (context) =>
+                context.read<AuthenticationService>().authStateChanges,
+            initialData: ""),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Obscura',
+        theme: ThemeData(
+          primaryColor: primaryColour,
+          accentColor: accentColour,
+          scaffoldBackgroundColor: primaryColour,
+        ),
+        home: AuthenticationWrapper(),
       ),
-      routes: {
-        '/': (context) => SplashScreen(),
-      },
     );
+  }
+}
+
+class AuthenticationWrapper extends StatelessWidget {
+  const AuthenticationWrapper({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final firebaseUser = context.watch<User>();
+
+    if (firebaseUser != null) {
+      //user logged in
+      return Feed();
+    }
+
+    //user not logged in
+    return Login();
   }
 }

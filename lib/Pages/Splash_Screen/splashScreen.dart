@@ -4,6 +4,7 @@ import 'package:obscura/Pages/Login_Reg_Screens/login.dart';
 import 'package:obscura/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:loading_animations/loading_animations.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -26,6 +27,7 @@ class _SplashScreen extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final firebaseUser = context.watch()<User>();
     final double width = MediaQuery.of(context).size.width;
     Widget topSvg =
         SvgPicture.asset('assets/Vectors/Corner-Art.svg', width: width * 1.5);
