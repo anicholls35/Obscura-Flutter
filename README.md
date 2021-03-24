@@ -1,4 +1,4 @@
-# Obsucra - VERSION: 2.0.0-pre
+# Obsucra - VERSION: 2.1.0-pre
 ## *Status: In-Development -> Unpublished*
 
 ### About
