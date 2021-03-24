@@ -1,10 +1,13 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:obscura/Global_Componets/fadeRoute.dart';
 import 'package:obscura/Pages/Feed/feed.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/Components/loginButton.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/Components/loginFormField.dart';
+import 'package:obscura/Pages/Login_Reg_Screens/authentication_service.dart';
 import 'package:obscura/constants.dart';
+import 'package:provider/provider.dart';
 
 class LoginColumn extends StatefulWidget {
   LoginColumn({Key key}) : super(key: key);
@@ -32,6 +35,15 @@ class _LoginColumn extends State<LoginColumn> {
     color: Colors.white,
   );
 
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     //Width + Height
@@ -42,7 +54,8 @@ class _LoginColumn extends State<LoginColumn> {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 50),
           child: LoginFormField(
-            formText: "username".toUpperCase(),
+            formText: "email".toUpperCase(),
+            controller: emailController,
             prefixIcon: Icon(Icons.email),
             textStyle: formTextStyle,
             edgeInsetsGeometry: formEdgeInsetsGeometry,
@@ -55,6 +68,7 @@ class _LoginColumn extends State<LoginColumn> {
           padding: EdgeInsets.symmetric(horizontal: 50),
           child: LoginFormField(
             formText: "password".toUpperCase(),
+            controller: passwordController,
             prefixIcon: Icon(Icons.lock),
             textStyle: formTextStyle,
             edgeInsetsGeometry: formEdgeInsetsGeometry,
@@ -73,12 +87,44 @@ class _LoginColumn extends State<LoginColumn> {
             paddingInsets: buttonPaddingInsets,
             onPressed: () {
               print('Login Pressed');
-              Navigator.pushReplacement(
-                context,
-                FadeRoute(
-                  page: Feed(),
-                ),
-              );
+              context
+                  .read<AuthenticationService>()
+                  .signIn(
+                    email: emailController.text.trim(),
+                    password: passwordController.text.trim(),
+                  )
+                  .then((res) {
+                if (res == "logged-in") {
+                  context.read<AuthenticationService>().getUser().then((user) {
+                    print("Got username: " + user.email);
+                    print("UID: " + user.uid);
+                  });
+                  Navigator.pushReplacement(
+                    context,
+                    FadeRoute(
+                      page: Feed(),
+                    ),
+                  );
+                } else {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text("Sign-in Error"),
+                        content: Text(res),
+                        actions: <Widget>[
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text("Close"),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                }
+              });
             },
           ),
         ),
@@ -105,6 +151,22 @@ class _LoginColumn extends State<LoginColumn> {
             paddingInsets: buttonPaddingInsets,
             onPressed: () {
               print('google Pressed');
+              context
+                  .read<AuthenticationService>()
+                  .signInWithGoogle()
+                  .then((res) {
+                if (res == "logged-in") {
+                  Navigator.pushReplacement(
+                    context,
+                    FadeRoute(
+                      page: Feed(),
+                    ),
+                  );
+                } else {
+                  print("google failed");
+                  print(res);
+                }
+              });
             },
           ),
         ),

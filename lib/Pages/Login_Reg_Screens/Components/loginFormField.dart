@@ -10,6 +10,7 @@ class LoginFormField extends StatelessWidget {
   final Color fillColor;
   final bool obscure;
   final TextStyle textStyle;
+  final TextEditingController controller;
 
   //Constructor
   const LoginFormField({
@@ -21,6 +22,7 @@ class LoginFormField extends StatelessWidget {
     @required this.paddingInsets,
     @required this.fillColor,
     @required this.obscure,
+    @required this.controller,
   }) : super(key: key);
 
   @override
@@ -31,6 +33,7 @@ class LoginFormField extends StatelessWidget {
         padding: this.paddingInsets,
         child: TextField(
           autocorrect: false,
+          controller: this.controller,
           obscureText: this.obscure,
           decoration: InputDecoration(
             contentPadding: this.edgeInsetsGeometry,

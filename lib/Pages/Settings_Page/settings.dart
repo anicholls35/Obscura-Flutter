@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:obscura/Pages/Login_Reg_Screens/authentication_service.dart';
+import 'package:provider/provider.dart';
 
 import '../../Global_Componets/AppBar/baseAppBar.dart';
 import '../../Global_Componets/Dummy_Assets/fakeData.dart';
 import '../../Global_Componets/NavBar/baseNavBar.dart';
+import '../../Global_Componets/fadeRoute.dart';
 import '../../constants.dart';
 import '../../constants.dart';
+import '../../main.dart';
 import '../Feed/feed.dart';
 
 class Settings extends StatelessWidget {
@@ -47,6 +51,11 @@ class Settings extends StatelessWidget {
                   icon: Icons.help,
                   name: 'About',
                 ),
+                SettingChoiceCard(
+                  icon: Icons.logout,
+                  name: "Sign Out",
+                  signOut: true,
+                ),
               ],
             ),
           ),
@@ -73,12 +82,14 @@ class SettingChoiceCard extends StatelessWidget {
   String name;
   IconData icon;
   Widget page;
+  bool signOut;
 
   SettingChoiceCard({
     Key key,
     @required this.icon,
     @required this.name,
     this.page,
+    this.signOut = false,
   }) : super(key: key);
 
   @override
@@ -87,8 +98,36 @@ class SettingChoiceCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: GestureDetector(
         onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => page));
+          if (this.signOut) {
+            context.read<AuthenticationService>().signOut().then((res) {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: Text("Signed-Out"),
+                    content: Text(res),
+                    actions: <Widget>[
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Text("Close"),
+                      ),
+                    ],
+                  );
+                },
+              );
+            });
+            Navigator.pushReplacement(
+              context,
+              FadeRoute(
+                page: AuthenticationWrapper(),
+              ),
+            );
+          } else {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => page));
+          }
         },
         child: Container(
           width: double.infinity,
