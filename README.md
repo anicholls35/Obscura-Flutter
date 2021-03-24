@@ -12,6 +12,12 @@ Lucky7's goal is to have Obscura to be functional on both Android & iOS by **1st
 ***For aid in using this GitHub repo, please read the guidelines in the wiki section. There you'll also find useful links to aid in the development process***
 
 # Obscura Change-log
+### 24th March 2021
+1. Made Obscura use Future (async) to access firebase
+2. Created an authenticator_service.dart
+   - Allows user to sign in/sign up & sign out
+   - Allows dev to pull signed in user details where ever they're needed
+
 ### 15th March 2021
 1. Updated the entire app & dependancies to run on Flutter Stable Channel (2.0.2)
 2. Linked app with Firebase Backend
