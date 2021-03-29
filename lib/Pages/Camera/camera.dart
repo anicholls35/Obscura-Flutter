@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
@@ -7,12 +8,8 @@ import 'package:obscura/Global_Componets/AppBar/baseAppBar.dart';
 import 'package:obscura/Global_Componets/Dummy_Assets/fakeData.dart';
 import 'package:obscura/Global_Componets/NavBar/baseNavBar.dart';
 import 'package:obscura/Global_Componets/Service_Workers/storageWorker.dart';
-import 'package:permission_handler/permission_handler.dart';
-import 'package:provider/provider.dart';
 
 import '../../constants.dart';
-import '../../constants.dart';
-import '../Login_Reg_Screens/authentication_service.dart';
 
 class Camera extends StatefulWidget {
   @override
@@ -71,12 +68,23 @@ class _Camera extends State<Camera> {
                   size: 35.0,
                 ),
                 onPressed: () async {
-                  print("camera.dart: uid --> $userID");
+                  print("camera.dart: uid --> ${firebaseAuth.currentUser.uid}");
                   print("Attempting Upload...");
-                  var upload = await StorageWorker()
-                      .uploadFile(_image, "feed_pics", userID);
+                  var upload = await StorageWorker().uploadFile(
+                      _image, "feed_pics", firebaseAuth.currentUser.uid);
 
                   print("Download link of: $upload");
+
+                  //add data to database
+                  CollectionReference posts = firebaseDatabase.collection(
+                      "users/${firebaseAuth.currentUser.uid}/posts");
+                  posts.add({
+                    "image": upload,
+                    "description": desController.text,
+                    "timestamp": DateTime.now(),
+                  });
+
+                  Navigator.pop(context);
                 },
               ),
             ),

@@ -29,7 +29,7 @@ class Obscura extends StatelessWidget {
     return MultiProvider(
       providers: [
         Provider<AuthenticationService>(
-          create: (_) => AuthenticationService(FirebaseAuth.instance),
+          create: (_) => AuthenticationService(),
         ),
         StreamProvider(
           create: (context) =>
@@ -62,7 +62,7 @@ class AuthenticationWrapper extends StatelessWidget {
 
     if (firebaseUser != null) {
       print(firebaseUser);
-      userID = firebaseUser.uid;
+      String userID = firebaseUser.uid;
       print("main.dart: uid --> $userID");
       //user logged in
       return Feed();
