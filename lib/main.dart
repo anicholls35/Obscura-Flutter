@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/authentication_service.dart';
-import 'package:obscura/Pages/Splash_Screen/splashScreen.dart';
 import 'package:obscura/constants.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -9,7 +8,8 @@ import 'package:provider/provider.dart';
 
 import 'Pages/Feed/feed.dart';
 import 'Pages/Login_Reg_Screens/login.dart';
-import 'Pages/Splash_Screen/splashScreen.dart';
+import 'constants.dart';
+import 'constants.dart';
 
 Future<void> main() async {
   //Below 2 lines locks app in portrait orintation
@@ -29,7 +29,7 @@ class Obscura extends StatelessWidget {
     return MultiProvider(
       providers: [
         Provider<AuthenticationService>(
-          create: (_) => AuthenticationService(FirebaseAuth.instance),
+          create: (_) => AuthenticationService(),
         ),
         StreamProvider(
           create: (context) =>
@@ -61,8 +61,9 @@ class AuthenticationWrapper extends StatelessWidget {
     final firebaseUser = context.watch<User>();
 
     if (firebaseUser != null) {
-      print("GOT HERE");
       print(firebaseUser);
+      String userID = firebaseUser.uid;
+      print("main.dart: uid --> $userID");
       //user logged in
       return Feed();
     }

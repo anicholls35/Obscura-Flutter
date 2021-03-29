@@ -1,16 +1,14 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import '../../constants.dart';
+
 class AuthenticationService {
-  final FirebaseAuth _firebaseAuth;
-
-  AuthenticationService(this._firebaseAuth);
-
-  Stream<User> get authStateChanges => _firebaseAuth.authStateChanges();
+  Stream<User> get authStateChanges => firebaseAuth.authStateChanges();
 
   Future<String> signIn({String email, String password}) async {
     try {
-      await _firebaseAuth.signInWithEmailAndPassword(
+      await firebaseAuth.signInWithEmailAndPassword(
           email: email, password: password);
       return "logged-in";
     } on FirebaseAuthException catch (e) {
@@ -38,7 +36,7 @@ class AuthenticationService {
     );
 
     try {
-      await _firebaseAuth.signInWithCredential(creds);
+      await firebaseAuth.signInWithCredential(creds);
       return 'logged-in';
     } on FirebaseAuthException catch (e) {
       return e.message;
@@ -60,7 +58,7 @@ class AuthenticationService {
     }
 
     try {
-      await _firebaseAuth.createUserWithEmailAndPassword(
+      await firebaseAuth.createUserWithEmailAndPassword(
           email: email, password: password);
       return "sign-up";
     } on FirebaseAuthException catch (e) {
@@ -75,12 +73,12 @@ class AuthenticationService {
   }
 
   Future<User> getUser() async {
-    return _firebaseAuth.currentUser;
+    return firebaseAuth.currentUser;
   }
 
   Future<String> signOut() async {
-    String name = _firebaseAuth.currentUser.email;
-    _firebaseAuth.signOut();
+    String name = firebaseAuth.currentUser.email;
+    firebaseAuth.signOut();
     return "Signed-out: " + name;
   }
 }
