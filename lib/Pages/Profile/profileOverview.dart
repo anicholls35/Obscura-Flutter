@@ -8,93 +8,136 @@ import 'package:obscura/Pages/Profile/Components/tabBarProfiles.dart';
 import 'package:obscura/Pages/Profile/profileContaints.dart';
 import 'package:swipe_gesture_recognizer/swipe_gesture_recognizer.dart';
 
-class ProfileOverview extends StatelessWidget {
-  List<String> getName() {
-    String userName = users[0].userName;
-    int index = userName.indexOf(' ');
-    List<String> _temp = [
-      userName.substring(0, index),
-      userName.substring(index + 1)
-    ];
+import '../../constants.dart';
 
-    return _temp;
+class ProfileOverview extends StatefulWidget {
+  _ProfileOverview createState() => _ProfileOverview();
+}
+
+class _ProfileOverview extends State<ProfileOverview> {
+  Future<Map> _user;
+
+  Future<Map> fetchUser() async {
+    String uid = firebaseAuth.currentUser.uid;
+    print("GOT HERE YAYA --> $uid");
+    var user;
+
+    await firebaseDatabase
+        .collection("users")
+        .where("uid", isEqualTo: uid)
+        .get()
+        .then((value) {
+      value.docs.forEach((doc) {
+        print("\n\n\nJust doc --> $doc\n\n\n");
+        print("\n\n\ndoc.data() --> ${doc.data()}\n\n\n");
+        user = doc.data();
+      });
+    });
+
+    print("ABOUT TO RETURN YAYA");
+    print("\n\n\n\n\n\n\n$user\n\n\n\n\n\n\n\n");
+    return user;
   }
 
   @override
-  Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height;
-    List<String> userName = getName();
-    return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          //UserPic
-          SwipeGestureRecognizer(
-            onSwipeUp: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      ProfileContaints(image: users[0].profilePicture),
-                ),
-              );
-            },
-            onSwipeRight: () {
-              Navigator.pop(context);
-            },
-            child: GestureDetector(
-              onTap: () {
-                print('Tap Detected');
-                Navigator.push(
-                  context,
-                  FadeRoute(
-                    page: ImageView(image: users[0].profilePicture),
-                  ),
-                );
-              },
-              child: ProfileFull(pImage: users[0].profilePicture),
-            ),
-          ),
-          //Back Button
-          Positioned(
-            top: height * 0.05,
-            left: MediaQuery.of(context).size.width * 0.01,
-            child: Container(
-              child: PopButton(
-                size: 30,
-              ),
-            ),
-          ),
-          //User Name
-          Positioned(
-            bottom: height * 0.13,
-            left: 15,
-            child: Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+  void initState() {
+    super.initState();
+    _user = fetchUser();
+  }
+
+  @override
+  Widget build(BuildContext context) => FutureBuilder(
+        future: _user,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            final double height = MediaQuery.of(context).size.height;
+            return Scaffold(
+              body: Stack(
                 children: <Widget>[
-                  Text(
-                    userName[0],
-                    style: TextStyle(color: Colors.white, fontSize: 40),
+                  //UserPic
+                  SwipeGestureRecognizer(
+                    onSwipeUp: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfileContaints(
+                            image: Image(
+                              image: NetworkImage(snapshot.data["profile_pic"]),
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                    onSwipeRight: () {
+                      Navigator.pop(context);
+                    },
+                    child: GestureDetector(
+                      onTap: () {
+                        print('Tap Detected');
+                        Navigator.push(
+                          context,
+                          FadeRoute(
+                            page: ImageView(
+                              image: Image(
+                                image:
+                                    NetworkImage(snapshot.data["profile_pic"]),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                      child: ProfileFull(
+                        pImage: Image(
+                          image: NetworkImage(snapshot.data["profile_pic"]),
+                        ),
+                      ),
+                    ),
                   ),
-                  Text(
-                    userName[1],
-                    style: TextStyle(color: Colors.white, fontSize: 40),
+                  //Back Button
+                  Positioned(
+                    top: height * 0.05,
+                    left: MediaQuery.of(context).size.width * 0.01,
+                    child: Container(
+                      child: PopButton(
+                        size: 30,
+                      ),
+                    ),
+                  ),
+                  //User Name
+                  Positioned(
+                    bottom: height * 0.13,
+                    left: 15,
+                    child: Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            snapshot.data["first_name"],
+                            style: TextStyle(color: Colors.white, fontSize: 40),
+                          ),
+                          Text(
+                            snapshot.data["last_name"],
+                            style: TextStyle(color: Colors.white, fontSize: 40),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  //Tab bar
+                  Positioned(
+                    width: MediaQuery.of(context).size.width,
+                    bottom: height * 0.05,
+                    child: Hero(
+                      tag: 'tabBar',
+                      child: TabBarProfiles(),
+                    ),
                   ),
                 ],
               ),
-            ),
-          ),
-          //Tab bar
-          Positioned(
-            width: MediaQuery.of(context).size.width,
-            bottom: height * 0.05,
-            child: Hero(
-              tag: 'tabBar',
-              child: TabBarProfiles(),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+            );
+          } else {
+            return Center(child: CircularProgressIndicator.adaptive());
+          }
+        },
+      );
 }

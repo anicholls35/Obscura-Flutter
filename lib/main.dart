@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 import 'Pages/Feed/feed.dart';
 import 'Pages/Login_Reg_Screens/login.dart';
 import 'constants.dart';
+import 'constants.dart';
 
 Future<void> main() async {
   //Below 2 lines locks app in portrait orintation
