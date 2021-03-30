@@ -26,7 +26,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
     @required this.title,
     @required this.appBar,
     this.widgets,
-    @required this.activeUserPic,
+    this.activeUserPic,
     this.backgroundColor,
     this.elevation,
     this.backIcon = false,
@@ -46,31 +46,33 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
               onPressed: () {
                 Navigator.pop(context);
               })
-          : new Padding(
-              padding: EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ProfileOverview(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: 20,
-                  height: 20,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: secondryColour),
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: activeUserPic.image,
+          : activeUserPic != null
+              ? new Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfileOverview(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: secondryColour),
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: activeUserPic.image,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            ),
+                )
+              : Container(),
       actions: widgets,
     );
   }

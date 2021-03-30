@@ -71,7 +71,7 @@ class _Camera extends State<Camera> {
                   print("camera.dart: uid --> ${firebaseAuth.currentUser.uid}");
                   print("Attempting Upload...");
                   var upload = await StorageWorker().uploadFile(
-                      _image, "feed_pics", firebaseAuth.currentUser.uid);
+                      _image, "feed_pics", firebaseAuth.currentUser.uid, true);
 
                   print("Download link of: $upload");
 
@@ -128,8 +128,11 @@ class _Camera extends State<Camera> {
                 controller: desController,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            color: Colors.white, style: BorderStyle.solid)),
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                        style: BorderStyle.solid,
+                      ),
+                    ),
                     hintText: 'Description',
                     hintStyle: new TextStyle(
                       color: Colors.white,

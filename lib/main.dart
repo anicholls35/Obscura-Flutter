@@ -5,10 +5,8 @@ import 'package:obscura/constants.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
-
 import 'Pages/Feed/feed.dart';
 import 'Pages/Login_Reg_Screens/login.dart';
-import 'constants.dart';
 import 'constants.dart';
 
 Future<void> main() async {

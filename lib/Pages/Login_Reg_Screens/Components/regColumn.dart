@@ -4,6 +4,7 @@ import 'package:obscura/Global_Componets/fadeRoute.dart';
 import 'package:obscura/Pages/Channel_Select/channelSelect.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/Components/loginButton.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/Components/loginFormField.dart';
+import 'package:obscura/Pages/Login_Reg_Screens/addUserData.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/authentication_service.dart';
 import 'package:obscura/constants.dart';
 import 'package:provider/provider.dart';
@@ -127,7 +128,7 @@ class RegisterColumn extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     FadeRoute(
-                      page: ChannelSelect(),
+                      page: AddUserData(),
                     ),
                   );
                 }
