@@ -9,6 +9,9 @@ import 'package:obscura/Pages/Login_Reg_Screens/authentication_service.dart';
 import 'package:obscura/constants.dart';
 import 'package:provider/provider.dart';
 
+import '../../../constants.dart';
+import '../../../constants.dart';
+
 class LoginColumn extends StatefulWidget {
   LoginColumn({Key key}) : super(key: key);
   _LoginColumn createState() => _LoginColumn();
@@ -98,6 +101,21 @@ class _LoginColumn extends State<LoginColumn> {
                   context.read<AuthenticationService>().getUser().then((user) {
                     print("Got username: " + user.email);
                     print("UID: " + user.uid);
+
+                    String url;
+                    firebaseDatabase
+                        .collection("users")
+                        .where("uid", isEqualTo: user.uid)
+                        .get()
+                        .then((value) {
+                      value.docs.forEach((doc) {
+                        print("\n\n\nJust doc --> $doc\n\n\n");
+                        print("\n\n\ndoc.data() --> ${doc.data()}\n\n\n");
+                        url = doc.data()["profile_pic"];
+                      });
+                    });
+
+                    userImg = url;
                   });
                   Navigator.pushReplacement(
                     context,

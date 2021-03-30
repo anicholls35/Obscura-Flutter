@@ -68,6 +68,26 @@ class _BaseNavBar extends State<BaseNavBar> {
                           ));
                     }
                     break;
+                  case 1:
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text("Coming Soon: Notifications"),
+                            content: Text(
+                                "Notfications will be the apps central hub. " +
+                                    "Here you'll see updates, ongoing challenges, etc."),
+                            actions: <Widget>[
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text("Okay"),
+                              ),
+                            ],
+                          );
+                        });
+                    break;
                   case 2:
                     {
                       Navigator.push(
@@ -76,6 +96,28 @@ class _BaseNavBar extends State<BaseNavBar> {
                             builder: (context) => Camera(),
                           ));
                     }
+                    break;
+                  case 3:
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text("Coming Soon: Challanges/Leaderboards"),
+                            content: Text("Obscura gamifies your photo sharing experience " +
+                                "by introducing challenges and leaderboards. " +
+                                "From short lightning challenges to longer geo/item " +
+                                "based challenges. You can also score and be scored " +
+                                "to compare you photography skills to others"),
+                            actions: <Widget>[
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text("Okay"),
+                              ),
+                            ],
+                          );
+                        });
                     break;
                   case 4:
                     {
