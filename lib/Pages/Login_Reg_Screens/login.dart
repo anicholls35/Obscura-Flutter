@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:obscura/Global_Componets/fadeRoute.dart';
 import 'package:obscura/Pages/Login_Reg_Screens/Components/loginButton.dart';
@@ -13,7 +16,56 @@ class Login extends StatefulWidget {
 
 class _Login extends State<Login> {
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      //Terms Dialog
+      String os = Platform.isAndroid ? "Android" : "iOS";
+
+      await showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text("Welcome to Obscura - Terms of early testing"),
+              content: Text("Thank you for trying the Obscura " +
+                  "App for $os. Obscura is a product by Lucky7 for MACS year 3 project. Before continuing, we'd like to quickly explain a " +
+                  "few things.\n1. This is early production app and is missing " +
+                  "alot of the features which we aim to have for the final product.\n" +
+                  "2. Even though this is an early production app, it is connected to " +
+                  "a live server. Which means any accounts made and posts uploaded " +
+                  "are stored online and saved. Your data is all encryped, and is " +
+                  "only accsessable by the members of Lucky7.\n" +
+                  "3. After the duration of this public test, all data made during " +
+                  "the testing stage will be deleted from the servers.\n" +
+                  "After reading, please accept below; or decline. " +
+                  "You can withdrawl anytime by emailing: " +
+                  "luckygroup7@heriotwatt.onmicrosoft.com"),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    if (Platform.isAndroid) {
+                      SystemNavigator.pop();
+                    } else {
+                      exit(0);
+                    }
+                  },
+                  child: Text("Disagree"),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text("Agree"),
+                ),
+              ],
+            );
+          });
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
+    //Login Screen
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     Widget topSvg =

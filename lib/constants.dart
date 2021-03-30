@@ -10,3 +10,5 @@ const Color secondryColour = Color(0xff2dfdcf);
 final storageInstance = FirebaseStorage.instance;
 final firebaseAuth = FirebaseAuth.instance;
 final firebaseDatabase = FirebaseFirestore.instance;
+
+var userImg;
