@@ -76,12 +76,13 @@ class _Camera extends State<Camera> {
                   print("Download link of: $upload");
 
                   //add data to database
-                  CollectionReference posts = firebaseDatabase.collection(
-                      "users/${firebaseAuth.currentUser.uid}/posts");
+                  CollectionReference posts =
+                      firebaseDatabase.collection("posts");
                   posts.add({
                     "image": upload,
                     "description": desController.text,
                     "timestamp": DateTime.now(),
+                    "uploader": firebaseAuth.currentUser.uid,
                   });
 
                   Navigator.pop(context);

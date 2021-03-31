@@ -14,12 +14,12 @@ class FeedPost extends StatelessWidget {
   //Constructor - Assignes all values from which are passed
   const FeedPost(
       {Key key,
-      @required this.uploaderName,
-      @required this.uploaderProfilePic,
-      @required this.rating,
-      @required this.commentsTotal,
-      @required this.geoLocation,
-      @required this.postImage})
+      this.uploaderName,
+      this.uploaderProfilePic,
+      this.rating,
+      this.commentsTotal,
+      this.geoLocation,
+      this.postImage})
       : super(key: key);
 
   //Returns a container widget will values on display
